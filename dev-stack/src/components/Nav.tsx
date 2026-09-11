@@ -3,7 +3,7 @@ import Icon from "../assets/hamburger-icon.png";
 
 const Nav = () => {
     return (
-        <nav className="sticky flex items-center justify-between bg-white border-b border-gray-100 px-4 py-4 md:px-16"> {/*sticky is used so that the navbar stay put and md - show this normally but hide it when the screen reaches this.*/}
+        <nav className="sticky top-0 z-50 flex items-center justify-between bg-white border-b border-gray-100 px-4 py-4 md:px-16"> {/*sticky is used so that the navbar stay put and md - show this normally but hide it when the screen reaches this.*/}
 
         {/*Mobile menu button*/}
            <div className="flex items-center justify-between w-full md:hidden"> 
