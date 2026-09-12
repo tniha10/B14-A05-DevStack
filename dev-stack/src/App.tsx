@@ -1,18 +1,19 @@
-import Nav from "./components/Nav"; 
+import Nav from "./components/Nav";
 import Banner from "./components/Banner";
 import Technologies from "./components/technologies/Technologies";
 import { Suspense } from "react";
 import type { Itechnology } from "./types/technologyType";
 
-const technologiesFetch = async ():Promise<Itechnology[]> => {
-  const res = await fetch ("/data.json");
+const technologiesFetch = async (): Promise<Itechnology[]> => {
+  const res = await fetch("/data.json");
   const data = await res.json();
   return data;
 };
 
-function App() {
+function App(){
   const technologiesPromise = technologiesFetch();
-  return (
+
+  return(
     <>
       <Nav />
       <Banner />
@@ -20,7 +21,7 @@ function App() {
         <Technologies technologiesPromise={technologiesPromise}/>
       </Suspense>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
