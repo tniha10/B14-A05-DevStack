@@ -41,7 +41,7 @@ const Technologies = ({ technologiesPromise }: TechnologiesProps) => {
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-3 lg:grid-cols-3">
                     {/*.map() function to iterate over the technologies array and render a TechnologiesCard for each technology*/}
                     {technologies.map((technology) => (
-                        <TechnologiesCard key={technology.id} technology={technology} addToStack={addToStack}/>
+                        <TechnologiesCard key={technology.id} technology={technology} addToStack={addToStack} isSelected={selectedTechnologies.some((t) => t.id === technology.id)}/>
                     ))}   
                 </div>   
             

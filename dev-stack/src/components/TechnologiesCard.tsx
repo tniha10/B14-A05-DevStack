@@ -4,9 +4,10 @@ import type { Itechnology } from "../types/technologyType";
 interface TechnologiesCardProps {
     technology: Itechnology;
     addToStack: (technology: Itechnology) => void;
+    isSelected: boolean;
 }
 
-const TechnologiesCard = ({ technology, addToStack }: TechnologiesCardProps) => {
+const TechnologiesCard = ({ technology, addToStack, isSelected }: TechnologiesCardProps) => {
     const { name, category, description, icon, rating, difficulty, badge } = technology;
 
     return (
@@ -49,8 +50,8 @@ const TechnologiesCard = ({ technology, addToStack }: TechnologiesCardProps) => 
 
             {/*Add to Stack Button*/}
             <button
-                onClick={() => addToStack(technology)}
-                className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300"> Add to Stack
+                onClick={() => addToStack(technology)} disabled={isSelected}
+                className={`w-full py-2 px-4 rounded transition-colors duration-300 ${ isSelected ? "bg-green-500 text-white cursor-not-allowed" : "bg-blue-500 text-white hover:bg-blue-600"}`}> {isSelected ?"✓ Added to Stack" : "Added to Stack"}
             </button>
         </div>
         
