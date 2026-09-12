@@ -2,7 +2,7 @@ import Image from '../assets/banner-stack.png';
 
 const Banner = () => {
     return (
-        <section className=" my-17 px-4 py-10 md:px-16 md:py-18"> {/*my-17 - margin top and bottom 17, px-4 - padding left and right 4, py-10 - padding top and bottom 10, md:px-16 - padding left and right 16 from medium screens and above, md:py-18 - padding top and bottom 18 from medium screens and above*/}
+        <section className=" my-7 px-4 py-10 md:px-16 md:py-18"> {/*my-17 - margin top and bottom 17, px-4 - padding left and right 4, py-10 - padding top and bottom 10, md:px-16 - padding left and right 16 from medium screens and above, md:py-18 - padding top and bottom 18 from medium screens and above*/}
 
           {/*Mobile view*/}
           <div className="flex flex-col items-center text-center gap-8 md:hidden"> {/*flex flex-col - flex container with column direction*/}
