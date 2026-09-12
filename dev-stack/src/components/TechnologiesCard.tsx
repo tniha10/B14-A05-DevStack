@@ -1,23 +1,20 @@
-import Star from "../../assets/star.png";
-import type { Itechnology } from "../../types/technologyType";
+import Star from "../assets/star.png";
+import type { Itechnology } from "../types/technologyType";
 
 interface TechnologiesCardProps {
     technology: Itechnology;
+    addToStack: (technology: Itechnology) => void;
 }
 
-const TechnologiesCard = ({ technology }: TechnologiesCardProps) => {
+const TechnologiesCard = ({ technology, addToStack }: TechnologiesCardProps) => {
     const { name, category, description, icon, rating, difficulty, badge } = technology;
 
-    const addToStack = () => {
-        console.log('Added ${name} to stack');
-    };
-
     return (
-        <div className="border border-gray-300 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div className="border border-gray-300 rounded-lg p-4 shadow-md hover:-translate-y-3 transition-shadow duration-800">
 
             {/*Icon and Badge Section*/}
             <div className="flex justify-between items-center mb-4">
-                <img src={icon} alt={name} className="w-12 h-12 object-contain" />
+                <img src={icon} alt={name} className="w-10 h-10 object-contain" />
 
                 <span className="bg-blue-100 text-blue-600 text-xs font-semibold px-3 py-1 rounded-full">
                     {badge}
@@ -52,7 +49,7 @@ const TechnologiesCard = ({ technology }: TechnologiesCardProps) => {
 
             {/*Add to Stack Button*/}
             <button
-                onClick={addToStack}
+                onClick={() => addToStack(technology)}
                 className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300"> Add to Stack
             </button>
         </div>

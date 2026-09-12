@@ -1,6 +1,6 @@
 import Nav from "./components/Nav";
 import Banner from "./components/Banner";
-import Technologies from "./components/technologies/Technologies";
+import Technologies from "./components/Technologies";
 import { Suspense } from "react";
 import type { Itechnology } from "./types/technologyType";
 
