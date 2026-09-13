@@ -50,8 +50,8 @@ const TechnologiesCard = ({ technology, addToStack, isSelected }: TechnologiesCa
 
             {/*Add to Stack Button*/}
             <button
-                onClick={() => addToStack(technology)} disabled={isSelected}
-                className={`w-full py-2 px-4 rounded transition-colors duration-300 ${ isSelected ? "bg-green-500 text-white cursor-not-allowed" : "bg-blue-500 text-white hover:bg-blue-600"}`}> {isSelected ?"✓ Added to Stack" : "Added to Stack"}
+                onClick={() => addToStack(technology)}
+                className={`w-full py-2 px-4 rounded transition-colors duration-300 ${ isSelected ? "bg-green-500 text-white" : "bg-blue-500 text-white hover:bg-blue-600"}`}> {isSelected ? "✓ Added to Stack" : "Added to Stack"}
             </button>
         </div>
         

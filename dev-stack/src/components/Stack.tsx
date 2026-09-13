@@ -33,7 +33,7 @@ const Stack = ({selectedTechnologies, onRemoveTechnology, onRemoveAllTechnologie
                   </div>
                 </div>
 
-                <button onClick={() => onRemoveTechnology(technology.id)}className="text-xl leading-none text-[#94A3B8] transition-colors hover:text-red-500"> x
+                <button onClick={() => onRemoveTechnology(technology.id)} className="text-xl leading-none text-[#94A3B8] transition-colors hover:text-red-500"> x
                 </button>
               </div>
             ))}

@@ -2,6 +2,8 @@ import Nav from "./components/Nav";
 import Banner from "./components/Banner";
 import Technologies from "./components/Technologies";
 import { Suspense } from "react";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import type { Itechnology } from "./types/technologyType";
 import Footer from "./components/Footer";
 
@@ -22,6 +24,7 @@ function App(){
         <Technologies technologiesPromise={technologiesPromise}/>
       </Suspense>
       <Footer />
+      <ToastContainer aria-label="Notifications" />
     </>
   );
 }
